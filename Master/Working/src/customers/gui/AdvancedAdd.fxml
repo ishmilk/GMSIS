@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="555.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="customers.gui.AdvancedAddController">
+   <children>
+      <Label layoutX="111.0" layoutY="57.0" text="Customer">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtName" layoutX="69.0" layoutY="113.0" prefHeight="25.0" prefWidth="177.0" promptText="Name" />
+      <TextField fx:id="txtAddr1" layoutX="69.0" layoutY="164.0" prefHeight="25.0" prefWidth="177.0" promptText="Address Line 1" />
+      <TextField fx:id="txtAddr2" layoutX="69.0" layoutY="211.0" prefHeight="25.0" prefWidth="177.0" promptText="Address Line 2" />
+      <TextField fx:id="txtPost" layoutX="69.0" layoutY="259.0" prefHeight="25.0" prefWidth="177.0" promptText="Post Code" />
+      <TextField fx:id="txtEmail" layoutX="69.0" layoutY="310.0" prefHeight="25.0" prefWidth="177.0" promptText="Email" />
+      <TextField fx:id="txtPhone" layoutX="69.0" layoutY="367.0" prefHeight="25.0" prefWidth="177.0" promptText="Phone Number" />
+      <RadioButton fx:id="type1" layoutX="76.0" layoutY="418.0" mnemonicParsing="false" selected="true" text="Individual">
+         <toggleGroup>
+            <ToggleGroup fx:id="Type" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="type2" layoutX="174.0" layoutY="418.0" mnemonicParsing="false" text="Business" toggleGroup="$Type" />
+      <Separator layoutX="315.0" orientation="VERTICAL" prefHeight="555.0" prefWidth="6.0" />
+      <Separator layoutX="2.0" layoutY="-1.0" prefHeight="0.0" prefWidth="1000.0" />
+      <Label layoutX="789.0" layoutY="47.0" text="BOOKING">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="428.0" layoutY="47.0" text="VEHICLE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtMileage" layoutX="373.0" layoutY="453.0" prefHeight="25.0" prefWidth="200.0" promptText="Mileage" />
+      <TextField fx:id="txtService" layoutX="373.0" layoutY="416.0" prefHeight="25.0" prefWidth="200.0" promptText="Last Service Date" />
+      <TextField fx:id="txtColour" layoutX="373.0" layoutY="340.0" prefHeight="25.0" prefWidth="200.0" promptText="Colour" />
+      <TextField fx:id="txtMOT" layoutX="373.0" layoutY="378.0" prefHeight="25.0" prefWidth="200.0" promptText="MOT Renewal Date" />
+      <TextField fx:id="txtReg" layoutX="373.0" layoutY="112.0" prefHeight="25.0" prefWidth="200.0" promptText="Registration" />
+      <CheckBox fx:id="chWarranty" layoutX="373.0" layoutY="504.0" mnemonicParsing="false" onMouseClicked="#changeWarranty" text="Warranty" />
+      <Button fx:id="btnSave" layoutX="825.0" layoutY="499.0" mnemonicParsing="false" onAction="#save" text="SAVE" />
+      <Label fx:id="lblWarranty" layoutX="680.0" layoutY="271.0" text="WARRANTY" visible="false">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtPostcode" layoutX="680.0" layoutY="418.0" prefHeight="25.0" prefWidth="200.0" promptText="Post Code" visible="false" />
+      <TextField fx:id="txtAddress2" layoutX="680.0" layoutY="380.0" prefHeight="25.0" prefWidth="200.0" promptText="Address Line 2" visible="false" />
+      <TextField fx:id="txtCompany" layoutX="680.0" layoutY="304.0" prefHeight="25.0" prefWidth="200.0" promptText="Company Name" visible="false" />
+      <TextField fx:id="txtAddress1" layoutX="680.0" layoutY="342.0" prefHeight="25.0" prefWidth="200.0" promptText="Address Line 1" visible="false" />
+      <TextField fx:id="txtExpiration" layoutX="680.0" layoutY="455.0" prefHeight="25.0" prefWidth="200.0" promptText="Expiration Date" visible="false" />
+      <ComboBox fx:id="cbClassification" layoutX="373.0" layoutY="75.0" prefHeight="31.0" prefWidth="200.0" promptText="Classification" />
+      <ComboBox fx:id="cbGiven" layoutX="373.0" layoutY="152.0" onAction="#chooseTemplate" prefHeight="31.0" prefWidth="200.0" promptText="Standard Vehicles" />
+      <TextField fx:id="txtMake" layoutX="373.0" layoutY="189.0" prefHeight="25.0" prefWidth="200.0" promptText="Make" />
+      <TextField fx:id="txtModel" layoutX="373.0" layoutY="227.0" prefHeight="25.0" prefWidth="200.0" promptText="Model" />
+      <TextField fx:id="txtEngine" layoutX="373.0" layoutY="264.0" prefHeight="25.0" prefWidth="200.0" promptText="Engine Size" />
+      <TextField fx:id="txtFuel" layoutX="373.0" layoutY="302.0" prefHeight="25.0" prefWidth="200.0" promptText="Fuel Type" />
+      <ComboBox fx:id="cbMechanic" layoutX="724.0" layoutY="199.0" prefHeight="31.0" prefWidth="200.0" promptText="Mechanic" />
+      <DatePicker fx:id="datePicker" editable="false" layoutX="724.0" layoutY="82.0" onAction="#checkIfSaturdaySelected" prefHeight="31.0" prefWidth="200.0" promptText="Booking Date" />
+      <ChoiceBox fx:id="startTimeHour" layoutX="724.0" layoutY="122.0" prefHeight="31.0" prefWidth="90.0" />
+      <ChoiceBox fx:id="startTimeMin" layoutX="834.0" layoutY="122.0" prefHeight="31.0" prefWidth="90.0" />
+      <ChoiceBox fx:id="endTimeMin" layoutX="836.0" layoutY="162.0" prefHeight="31.0" prefWidth="90.0" />
+      <ComboBox fx:id="endTimeHour" layoutX="724.0" layoutY="162.0" onAction="#endTimeRestrictor" prefHeight="31.0" prefWidth="90.0" />
+      <Separator layoutX="627.0" layoutY="6.0" orientation="VERTICAL" prefHeight="555.0" prefWidth="6.0" />
+   </children>
+</AnchorPane>

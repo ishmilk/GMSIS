@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="screensframework.Screen5Controller">
+   <children>
+      <SplitPane dividerPositions="0.26884422110552764" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="143.0" prefWidth="637.0">
+               <children>
+                  <HBox layoutX="25.0" layoutY="52.0" spacing="15.0">
+                     <children>
+                        <Button layoutX="270.0" layoutY="36.0" mnemonicParsing="false" onAction="#goToAddCustomer" prefHeight="40.0" prefWidth="120.0" text="Add Customer" />
+                        <Button mnemonicParsing="false" onAction="#goToAddVehicle" prefHeight="40.0" prefWidth="120.0" text="Add Vehicle" />
+                        <Button mnemonicParsing="false" onAction="#goToMakeBooking" prefHeight="40.0" prefWidth="120.0" text="Make Booking" />
+                        <Button mnemonicParsing="false" onAction="#goToSearch" prefHeight="40.0" prefWidth="120.0" text="Search" />
+                        <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="120.0" text="Add User" />
+                        <Button mnemonicParsing="false" onAction="#goToStock" prefHeight="40.0" prefWidth="120.0" text="Stock" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="565.0" layoutY="6.0" spacing="15.0">
+                     <children>
+                        <Button layoutX="409.0" layoutY="9.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="120.0" text="Search User" />
+                        <Button layoutX="488.0" layoutY="9.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="120.0" text="Log out" />
+                     </children>
+                  </HBox>
+                  <Label layoutX="25.0" layoutY="13.0" minWidth="-Infinity" text="GM-SIS">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="295.0" layoutY="7.0" mnemonicParsing="false" onAction="#goToBookingInfo" prefHeight="40.0" prefWidth="120.0" text="Booking Info" />
+               </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <SplitPane dividerPositions="0.5" prefHeight="322.0" prefWidth="598.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <items>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <Label layoutX="57.0" layoutY="14.0" minWidth="-Infinity" text="Customer Search">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="23.0" layoutY="67.0" minWidth="-Infinity" text="Search for Customer:" />
+                              <Label layoutX="21.0" layoutY="110.0" minWidth="-Infinity" text="Select:" />
+                              <TextField layoutX="148.0" layoutY="63.0" />
+                              <Button layoutX="309.0" layoutY="62.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="100.0" text="Search" />
+                              <ChoiceBox layoutX="79.0" layoutY="106.0" prefWidth="150.0" />
+                              <Label layoutX="61.0" layoutY="158.0" minWidth="-Infinity" text="Customer Information">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="16.0" layoutY="218.0" minWidth="-Infinity" text="Name:" />
+                              <Label layoutX="16.0" layoutY="259.0" minWidth="-Infinity" text="Address:" />
+                              <Label layoutX="16.0" layoutY="300.0" minWidth="-Infinity" text="Postcode:" />
+                              <Label layoutX="16.0" layoutY="337.0" minWidth="-Infinity" text="Other Vehicles:" />
+                              <TextField layoutX="118.0" layoutY="214.0" />
+                              <TextField layoutX="118.0" layoutY="255.0" />
+                              <TextField layoutX="118.0" layoutY="296.0" />
+                              <TextArea layoutX="118.0" layoutY="335.0" prefHeight="76.0" prefWidth="150.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <Label layoutX="42.0" layoutY="14.0" minWidth="-Infinity" text="Vehicle">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="42.0" layoutY="61.0" minWidth="-Infinity" text="Reg:" />
+                              <Label layoutX="42.0" layoutY="99.0" minWidth="-Infinity" text="Classification:" />
+                              <Label layoutX="42.0" layoutY="177.0" minWidth="-Infinity" text="Make:" />
+                              <Label layoutX="42.0" layoutY="216.0" minWidth="-Infinity" text="Model:" />
+                              <Label layoutX="42.0" layoutY="257.0" minWidth="-Infinity" text="Fuel type:" />
+                              <Label layoutX="42.0" layoutY="295.0" minWidth="-Infinity" text="Colour:" />
+                              <Label layoutX="42.0" layoutY="333.0" minWidth="-Infinity" text="MOT:" />
+                              <Label layoutX="42.0" layoutY="374.0" minWidth="-Infinity" text="Mileage:" />
+                              <Label layoutX="248.0" layoutY="333.0" minWidth="-Infinity" text="Service:" />
+                              <CheckBox layoutX="188.0" layoutY="136.0" minWidth="-Infinity" mnemonicParsing="false" text="Warranty" />
+                              <TextField layoutX="148.0" layoutY="57.0" />
+                              <TextField layoutX="147.0" layoutY="95.0" />
+                              <TextField layoutX="147.0" layoutY="173.0" />
+                              <TextField layoutX="147.0" layoutY="212.0" />
+                              <TextField layoutX="148.0" layoutY="253.0" />
+                              <TextField layoutX="148.0" layoutY="291.0" />
+                              <TextField layoutX="100.0" layoutY="329.0" prefHeight="25.0" prefWidth="100.0" />
+                              <TextField layoutX="318.0" layoutY="329.0" prefHeight="25.0" prefWidth="113.0" />
+                              <TextField layoutX="148.0" layoutY="370.0" />
+                              <Button layoutX="315.0" layoutY="375.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="120.0" text="Add" />
+                           </children>
+                        </AnchorPane>
+                     </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

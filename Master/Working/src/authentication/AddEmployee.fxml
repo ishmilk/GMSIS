@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="555.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="authentication.AddEmployeeController">
+   <children>
+      <TextField fx:id="txtFirstName" layoutX="53.0" layoutY="105.0" prefHeight="25.0" prefWidth="190.0" promptText="First Name" />
+      <TextField fx:id="txtLastName" layoutX="53.0" layoutY="155.0" prefHeight="25.0" prefWidth="190.0" promptText="Last Name" />
+      
+      <TextField fx:id="txtPassword1" layoutX="53.0" layoutY="205.0" prefHeight="25.0" prefWidth="190.0" promptText="Password" />
+      <TextField fx:id="txtPassword2" layoutX="53.0" layoutY="255.0" prefHeight="25.0" prefWidth="190.0" promptText="Repeated Password" />
+      <Label fx:id="lblID" layoutX="53.0" layoutY="55.0" text="ID Number" />
+      <TextField fx:id="txtHourlyRate" layoutX="53.0" layoutY="405.0" prefHeight="25.0" prefWidth="190.0" promptText="Hourly Rate" visible="false" />
+      <Button fx:id="btnSave" layoutX="53.0" layoutY="460.0" mnemonicParsing="false" onAction="#addEmp" text="Save" />
+      <CheckBox fx:id="cbMechanic" layoutX="54.0" layoutY="355.0" mnemonicParsing="false" onMouseClicked="#checkOnlyMechanic" text="Mechanic" />
+      <CheckBox fx:id="cbAdmin" layoutX="54.0" layoutY="305.0" mnemonicParsing="false" onMouseClicked="#checkOnlyAdmin" text="Admin" />
+      <Label layoutX="294.0" layoutY="55.0" text="Current Users">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tableEmployee" layoutX="294.0" layoutY="105.0" prefHeight="407.0" prefWidth="670.0">
+         <columns>
+            <TableColumn fx:id="IDCol" prefWidth="134.0" text="ID Number" />
+            <TableColumn fx:id="nameCol" prefWidth="202.0" text="Name" />
+            <TableColumn fx:id="adminCol" prefWidth="106.0" text="Is Admin" />
+            <TableColumn fx:id="mechanicCol" prefWidth="105.0" text="Is Mechanic" />
+            <TableColumn fx:id="rateCol" prefWidth="124.0" text="Hourly Rate" />
+         </columns>
+      </TableView>
+      <Label layoutX="53.0" layoutY="21.0" text="Add New Employee">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      
+   </children>
+</AnchorPane>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="555.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="authentication.EmployeeController">
+   <children>
+      <TextField fx:id="txtFirstName" layoutX="752.0" layoutY="107.0" prefHeight="25.0" prefWidth="190.0" promptText="First Name" />
+      <TextField fx:id="txtLastName" layoutX="752.0" layoutY="157.0" prefHeight="25.0" prefWidth="190.0" promptText="Last Name" />
+      <Label layoutX="16.0" layoutY="30.0" text="Please select an employee for more details :" />
+      
+      <Button fx:id="btnAdd" layoutX="16.0" layoutY="490.0" mnemonicParsing="false" onAction="#AddEmp" prefWidth="100.0" text="Add" />
+      <Button fx:id="btnSave" layoutX="131.0" layoutY="490.0" mnemonicParsing="false" onAction="#SaveChanges" prefWidth="100.0" text="Save" />
+      <Button fx:id="btnDelete" layoutX="246.0" layoutY="490.0" mnemonicParsing="false" onAction="#Delete" prefHeight="25.0" prefWidth="100.0" text="Delete" />
+      
+      <TextField fx:id="txtPassword1" layoutX="752.0" layoutY="207.0" prefHeight="25.0" prefWidth="190.0" promptText="Password" />
+      <TextField fx:id="txtPassword2" layoutX="752.0" layoutY="257.0" prefHeight="25.0" prefWidth="190.0" promptText="Repeated Password" />
+      <TableView fx:id="tableEmployee" layoutX="16.0" layoutY="63.0" prefHeight="407.0" prefWidth="670.0">
+        <columns>
+          <TableColumn fx:id="IDCol" prefWidth="134.0" text="ID Number" />
+          <TableColumn fx:id="nameCol" prefWidth="202.0" text="Name" />
+          <TableColumn fx:id="adminCol" prefWidth="106.0" text="Is Admin" />
+            <TableColumn fx:id="mechanicCol" prefWidth="105.0" text="Is Mechanic" />
+            <TableColumn fx:id="rateCol" prefWidth="124.0" text="Hourly Rate" />
+        </columns>
+      </TableView>
+      <Label fx:id="lblID" layoutX="752.0" layoutY="63.0" text="ID Number" />
+      <TextField fx:id="txtHourlyRate" layoutX="752.0" layoutY="407.0" prefHeight="25.0" prefWidth="190.0" promptText="Hourly Rate" visible="false" />
+      <CheckBox fx:id="cbAdmin" layoutX="753.0" layoutY="307.0" mnemonicParsing="false" onMouseClicked="#checkOnlyAdmin" text="Admin" />
+      <CheckBox fx:id="cbMechanic" layoutX="753.0" layoutY="357.0" mnemonicParsing="false" onMouseClicked="#checkOnlyMechanic" text="Mechanic" />
+      
+   </children>
+</AnchorPane>

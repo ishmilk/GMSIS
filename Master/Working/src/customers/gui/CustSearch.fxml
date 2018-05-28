@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="555.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="customers.gui.CustSearchController">
+   <children>
+      <TableView fx:id="Cust" layoutX="22.0" layoutY="27.0" prefHeight="213.0" prefWidth="218.0">
+        <columns>
+          <TableColumn fx:id="custName" prefWidth="217.0" text="Name" />
+        </columns>
+      </TableView>
+      <Label layoutX="268.0" layoutY="68.0" text="Name :" />
+      <Label layoutX="268.0" layoutY="98.0" text="Address :" />
+      <Label layoutX="268.0" layoutY="150.0" text="Post Code :" />
+      <Label layoutX="268.0" layoutY="185.0" text="Email :" />
+      <Label layoutX="268.0" layoutY="217.0" text="Phone Number:" />
+      <Label fx:id="LBname" layoutX="387.0" layoutY="67.0" text="N/A" />
+      <Label fx:id="LBaddr1" layoutX="387.0" layoutY="97.0" text="N/A" />
+      <Label fx:id="LBaddr2" layoutX="387.0" layoutY="122.0" text="N/A" />
+      <Label fx:id="LBpost" layoutX="387.0" layoutY="149.0" text="N/A" />
+      <Label fx:id="LBemail" layoutX="387.0" layoutY="184.0" text="N/A" />
+      <Label fx:id="LBphone" layoutX="387.0" layoutY="216.0" text="N/A" />
+      <Label layoutX="151.0" layoutY="304.0" text="BOOKINGS">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="735.0" layoutY="304.0" text="PARTS">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TableView fx:id="InfoVeh" layoutX="563.0" layoutY="39.0" prefHeight="256.0" prefWidth="415.0">
+         <columns>
+            <TableColumn fx:id="viewReg1" prefWidth="112.0" text="Registration No" />
+            <TableColumn fx:id="viewType" prefWidth="77.0" text="Type" />
+            <TableColumn fx:id="viewModel" prefWidth="71.0" text="Model" />
+            <TableColumn fx:id="viewFuel" prefWidth="76.0" text="Fuel Type" />
+            <TableColumn fx:id="viewMake" minWidth="8.0" prefWidth="82.0" text="Make" />
+         </columns>
+      </TableView>
+      <Label layoutX="277.0" layoutY="253.0" text="Type :" />
+      <Label fx:id="LBtype" layoutX="387.0" layoutY="253.0" text="N/A" />
+      <Label layoutX="728.0" layoutY="13.0" text="VEHICLE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="328.0" layoutY="24.0" text="Customer Details">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TableView fx:id="BookInfo" layoutX="2.0" layoutY="325.0" prefHeight="229.0" prefWidth="475.0">
+         <columns>
+            <TableColumn fx:id="ViewID" prefWidth="133.0" text="Booking ID" />
+            <TableColumn fx:id="VviewDate" prefWidth="108.0" text="Date" />
+            <TableColumn fx:id="viewEmp" prefWidth="125.0" text="Employee" />
+            <TableColumn fx:id="viewCost" prefWidth="97.0" text="Cost" />
+         </columns>
+      </TableView>
+      <TableView fx:id="PartInfo" layoutX="563.0" layoutY="325.0" prefHeight="229.0" prefWidth="415.0">
+         <columns>
+            <TableColumn fx:id="PartName" prefWidth="111.0" text="Name" />
+            <TableColumn fx:id="PartDesc" prefWidth="177.0" text="Description" />
+            <TableColumn fx:id="PartDate" prefWidth="126.0" text="Date Installed" />
+         </columns>
+      </TableView>
+      <RadioButton fx:id="Filter2" layoutX="29.0" layoutY="278.0" mnemonicParsing="false" onAction="#showIndiv" text="Business Accounts">
+         <toggleGroup>
+            <ToggleGroup fx:id="SearchType" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="Filter1" layoutX="29.0" layoutY="253.0" mnemonicParsing="false" onAction="#showBusiness" text="Individual Accounts" toggleGroup="$SearchType" />
+   </children>
+</AnchorPane>

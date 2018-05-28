@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="555.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="parts.logic.searchPartsController">
+   <children>
+      <AnchorPane id="AnchorPane" layoutY="1.0" prefHeight="555.0" prefWidth="1000.0">
+         <children>
+            <Label layoutX="23.0" layoutY="25.0" text="Please select a customer for parts details :">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></Label>
+            <TextField fx:id="partName" layoutX="440.0" layoutY="93.0" prefHeight="26.0" prefWidth="127.0" promptText="Name" AnchorPane.rightAnchor="433.0" />
+            <TextArea fx:id="partDescription" layoutX="440.0" layoutY="136.0" prefHeight="94.0" prefWidth="127.0" promptText="Description" AnchorPane.rightAnchor="433.0" />
+            <TextField fx:id="partID" layoutX="440.0" layoutY="51.0" prefHeight="26.0" prefWidth="127.0" promptText="ID" AnchorPane.rightAnchor="433.0" />
+            <TextField fx:id="partCost" layoutX="440.0" layoutY="246.0" prefHeight="26.0" prefWidth="127.0" promptText="Cost" AnchorPane.rightAnchor="433.0" />
+            <TableView fx:id="customerTable" layoutX="23.0" layoutY="53.0" prefHeight="184.0" prefWidth="256.0">
+               <columns>
+                  <TableColumn fx:id="customerNameCol" prefWidth="133.0" text="Name" />
+                  <TableColumn fx:id="registrationCol" prefWidth="122.0" text="Registration" />
+               </columns>
+            </TableView>
+            <Label layoutX="324.0" layoutY="98.0" text="Name:" AnchorPane.leftAnchor="324.0" />
+            <Label layoutX="324.0" layoutY="136.0" text="Description:" AnchorPane.leftAnchor="324.0" />
+            <Label fx:id="partDateInStockLbl" layoutX="324.0" layoutY="286.0" text="Date In Stock:" AnchorPane.leftAnchor="324.0" />
+            <Label fx:id="partDateInstalledLbl" layoutX="324.0" layoutY="327.0" text="Date Installed:" AnchorPane.leftAnchor="324.0" />
+            <Label layoutX="324.0" layoutY="251.0" text="Cost:" AnchorPane.leftAnchor="324.0" />
+            <Label layoutX="324.0" layoutY="56.0" text="ID:" AnchorPane.leftAnchor="324.0" />
+            <TextField fx:id="partWarranty" layoutX="440.0" layoutY="360.0" prefHeight="26.0" prefWidth="127.0" promptText="Warranty" />
+            <Label layoutX="324.0" layoutY="365.0" text="Warranty:" AnchorPane.leftAnchor="324.0" />
+            <Label layoutX="324.0" layoutY="25.0" text="PART DETAILS:">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="667.0" layoutY="277.0" text="Name:" AnchorPane.leftAnchor="667.0" />
+            <Label layoutX="667.0" layoutY="319.0" text="Address:" />
+            <Label layoutX="667.0" layoutY="357.0" text="Post Code:" />
+            <Label fx:id="lblMake" layoutX="672.0" layoutY="154.0" text="Make" />
+            <Label fx:id="lblReg" layoutX="672.0" layoutY="111.0" text="Registration" />
+            <Label fx:id="lblClassification" layoutX="672.0" layoutY="70.0" text="Classification" />
+            <Label layoutX="672.0" layoutY="26.0" text="VEHICLE DETAILS:">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="667.0" layoutY="241.0" text="CUSTOMER DETAILS:" AnchorPane.leftAnchor="667.0">
+               <font>
+                  <Font name="System Bold Italic" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="vehicleClassification" layoutX="791.0" layoutY="70.0" text="Label" />
+            <Label fx:id="vehicleRegistration" layoutX="791.0" layoutY="111.0" text="Label" />
+            <Label fx:id="vehicleMake" layoutX="791.0" layoutY="154.0" text="Label" />
+            <Label fx:id="customerName" layoutX="786.0" layoutY="278.0" text="Label" />
+            <Label fx:id="customerAddress" layoutX="786.0" layoutY="316.0" text="Label" />
+            <Label fx:id="customerPostCode" layoutX="786.0" layoutY="358.0" text="Label" />
+            <TableView fx:id="partsTable" layoutX="23.0" layoutY="287.0" prefHeight="184.0" prefWidth="256.0">
+               <columns>
+                  <TableColumn fx:id="partNameCol" prefWidth="122.0" text="Name" />
+                  <TableColumn fx:id="installedCol" prefWidth="133.0" text="Date Installed" />
+               </columns>
+            </TableView>
+            <Label layoutX="23.0" layoutY="259.0" text="Please select part for more details :">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="partDateInStock" layoutX="440.0" layoutY="284.0" prefHeight="26.0" prefWidth="127.0" promptText="Date In Stock" />
+            <TextField fx:id="partDateInstalled" layoutX="440.0" layoutY="322.0" prefHeight="26.0" prefWidth="127.0" promptText="Date Installed" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

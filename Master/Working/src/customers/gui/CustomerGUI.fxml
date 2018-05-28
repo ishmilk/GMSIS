@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="555.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="customers.gui.CustomerGUIController">
+   <children>
+      <TableView fx:id="InfoTable" layoutX="16.0" layoutY="14.0" prefHeight="491.0" prefWidth="496.0">
+        <columns>
+          <TableColumn fx:id="TableID" prefWidth="91.00001525878906" text="Customer ID" />
+          <TableColumn fx:id="TableName" prefWidth="126.0" text="Name" />
+            <TableColumn fx:id="TableEmail" prefWidth="144.0" text="Email Address" />
+            <TableColumn fx:id="TablePhone" prefWidth="135.0" text="Phone Number" />
+        </columns>
+      </TableView>
+      <TextField fx:id="txtName" layoutX="552.0" layoutY="29.0" promptText="Name" />
+      <TextField fx:id="txtAddr1" layoutX="552.0" layoutY="67.0" promptText="Address Line 1" />
+      <TextField fx:id="txtAddr2" layoutX="552.0" layoutY="107.0" promptText="Address Line 2" />
+      <TextField fx:id="txtPost" layoutX="552.0" layoutY="149.0" promptText="Post Code" />
+      <TextField fx:id="txtPhone" layoutX="791.0" layoutY="29.0" promptText="Phone Number" />
+      <TextField fx:id="txtEmail" layoutX="791.0" layoutY="67.0" promptText="Email" />
+      <RadioButton fx:id="type1" layoutX="784.0" layoutY="132.0" mnemonicParsing="false" text="Business">
+         <toggleGroup>
+            <ToggleGroup fx:id="type" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="type2" layoutX="875.0" layoutY="132.0" mnemonicParsing="false" text="Individual" toggleGroup="$type" />
+      <TabPane layoutX="529.0" layoutY="261.0" prefHeight="282.0" prefWidth="463.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="    Bookings     ">
+               <content>
+                  <TableView fx:id="BookInfo" prefHeight="257.0" prefWidth="463.0">
+                     <columns>
+                        <TableColumn fx:id="ViewID" prefWidth="133.0" text="Booking ID" />
+                        <TableColumn fx:id="VviewDate" prefWidth="108.0" text="Date" />
+                        <TableColumn fx:id="viewEmp" prefWidth="125.0" text="Employee" />
+                        <TableColumn fx:id="viewCost" prefWidth="97.0" text="Cost" />
+                        
+                     </columns>
+                  </TableView>
+               </content>
+          </Tab>
+          <Tab text="   Vehicles    ">
+               <content>
+                  <TableView fx:id="InfoVeh" prefHeight="256.0" prefWidth="463.0">
+                     <columns>
+                        <TableColumn fx:id="viewReg1" prefWidth="130.0" text="Registration No" />
+                        <TableColumn fx:id="viewType" prefWidth="75.0" text="Type" />
+                        <TableColumn fx:id="viewMake" minWidth="8.0" prefWidth="94.0" text="Make" />
+                        <TableColumn fx:id="viewModel" prefWidth="75.0" text="Model" />
+                        <TableColumn fx:id="viewFuel" prefWidth="88.0" text="Fuel Type" />
+                     </columns>
+                  </TableView>
+               </content>
+          </Tab>
+            <Tab text="    Parts   ">
+               <content>
+                  <TableView fx:id="PartInfo" prefHeight="200.0" prefWidth="200.0">
+                    <columns>
+                      <TableColumn fx:id="PartName" prefWidth="119.0" text="Name" />
+                      <TableColumn fx:id="PartDesc" prefWidth="196.0" text="Description" />
+                        <TableColumn fx:id="PartDate" prefWidth="148.0" text="Date Installed" />
+                    </columns>
+                  </TableView>
+               </content>
+            </Tab>
+            <Tab text="    Bills    ">
+               <content>
+                  <TableView fx:id="BillInfo" prefHeight="200.0" prefWidth="200.0">
+                    <columns>
+                      <TableColumn fx:id="BillID" prefWidth="119.0" text="Bill ID" />
+                        <TableColumn fx:id="BillSettled" prefWidth="208.0" text="Status" />
+                      <TableColumn fx:id="bIllCost" prefWidth="130.0" text="Total Cost" />
+                    </columns>
+                  </TableView>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Separator layoutX="523.0" orientation="VERTICAL" prefHeight="555.0" prefWidth="0.0" />
+      <Separator layoutX="525.0" layoutY="247.0" prefHeight="5.0" prefWidth="471.0" />
+      <RadioButton fx:id="Filter1" layoutX="26.0" layoutY="515.0" mnemonicParsing="false" onAction="#showBusiness" text="Individual Accounts">
+         <toggleGroup>
+            <ToggleGroup fx:id="SearchType" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="Filter2" layoutX="208.0" layoutY="515.0" mnemonicParsing="false" onAction="#showIndiv" text="Business Accounts" toggleGroup="$SearchType" />
+      <Button layoutX="552.0" layoutY="206.0" mnemonicParsing="false" onAction="#AddCust" text="Add New Customer" />
+      <Button layoutX="727.0" layoutY="206.0" mnemonicParsing="false" onAction="#SaveCust" prefHeight="31.0" prefWidth="104.0" text="Save Details" />
+      <Button layoutX="850.0" layoutY="206.0" mnemonicParsing="false" onAction="#DelCust" text="Delete Customer" />
+      <Label fx:id="status" layoutX="695.0" layoutY="183.0" text="Label" visible="false" />
+      <Label fx:id="status" disable="true" layoutX="784.0" layoutY="183.0" text="Status" />
+   </children>
+</AnchorPane>

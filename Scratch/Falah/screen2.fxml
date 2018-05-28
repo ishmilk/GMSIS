@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="screensframework.Screen2Controller">
+   <children>
+      <SplitPane dividerPositions="0.26884422110552764" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="143.0" prefWidth="637.0">
+               <children>
+                  <HBox layoutX="25.0" layoutY="52.0" minWidth="-Infinity" spacing="15.0">
+                     <children>
+                        <Button layoutX="270.0" layoutY="36.0" mnemonicParsing="false" onAction="#goToAddCustomer" prefHeight="40.0" prefWidth="120.0" text="Add Customer" />
+                        <Button mnemonicParsing="false" onAction="#goToAddVehicle" prefHeight="40.0" prefWidth="120.0" text="Add Vehicle" />
+                        <Button mnemonicParsing="false" onAction="#goToMakeBooking" prefHeight="40.0" prefWidth="120.0" text="Make Booking" />
+                        <Button mnemonicParsing="false" onAction="#goToSearch" prefHeight="40.0" prefWidth="120.0" text="Search" />
+                        <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="120.0" text="Add User" />
+                        <Button mnemonicParsing="false" onAction="#goToStock" prefHeight="40.0" prefWidth="120.0" text="Stock" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="565.0" layoutY="6.0" spacing="15.0">
+                     <children>
+                        <Button layoutX="409.0" layoutY="9.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="120.0" text="Search User" />
+                        <Button layoutX="488.0" layoutY="9.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="120.0" text="Log out" />
+                     </children>
+                  </HBox>
+                  <Label layoutX="25.0" layoutY="13.0" minWidth="-Infinity" text="GM-SIS">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="294.0" layoutY="7.0" mnemonicParsing="false" onAction="#goToBookingInfo" prefHeight="40.0" prefWidth="120.0" text="Booking Info" />
+               </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <SplitPane dividerPositions="0.5" prefHeight="322.0" prefWidth="598.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <items>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <TreeView prefHeight="432.0" prefWidth="445.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                              <TreeTableView layoutX="62.0" layoutY="67.0" prefHeight="432.0" prefWidth="445.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <columns>
+                                  <TreeTableColumn prefWidth="27.0" text="ID" />
+                                  <TreeTableColumn prefWidth="156.0" text="Name" />
+                                    <TreeTableColumn prefWidth="119.0" text="Added" />
+                                    <TreeTableColumn maxWidth="-1.0" minWidth="-1.0" prefWidth="-1.0" text="Installed" />
+                                </columns>
+                              </TreeTableView>
+                           </children></AnchorPane>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <Label layoutX="152.0" layoutY="14.0" minWidth="-Infinity" text="ADD NEW STOCK">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <HBox layoutX="16.0" layoutY="55.0" spacing="87.0">
+                                 <children>
+                                    <Label layoutX="24.0" layoutY="55.0" minWidth="-Infinity" text="ID:">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField layoutX="74.0" layoutY="55.0" HBox.hgrow="ALWAYS" />
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="14.0" layoutY="91.0" spacing="63.0">
+                                 <children>
+                                    <Label layoutX="24.0" layoutY="89.0" minWidth="-Infinity" text="Name:">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField layoutX="70.0" layoutY="89.0" HBox.hgrow="ALWAYS" />
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="14.0" layoutY="135.0" spacing="25.0">
+                                 <children>
+                                    <Label layoutX="16.0" layoutY="135.0" minWidth="-Infinity" text="Description:">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <TextArea layoutX="126.0" layoutY="135.0" prefHeight="144.0" prefWidth="233.0" HBox.hgrow="ALWAYS" />
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="14.0" layoutY="364.0" spacing="21.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="364.0" minWidth="-Infinity" text="Date Added:">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField layoutX="133.0" layoutY="364.0" HBox.hgrow="ALWAYS" />
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="20.0" layoutY="310.0" spacing="68.0">
+                                 <children>
+                                    <Label layoutX="24.0" layoutY="311.0" minWidth="-Infinity" text="Cost:">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField layoutX="126.0" layoutY="311.0" HBox.hgrow="ALWAYS" />
+                                 </children>
+                              </HBox>
+                              <Button layoutX="304.0" layoutY="377.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="120.0" text="Save" AnchorPane.leftAnchor="304.0" AnchorPane.rightAnchor="21.0" />
+                           </children></AnchorPane>
+                     </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

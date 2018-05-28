@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="555.0" prefWidth="1000.0" style="-fx-background-color: #86C1B9;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="diagnosis_repairs.gui.CompleteBookingController">
+   <children>
+      <Label layoutX="13.0" layoutY="4.0" text="Complete Booking">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <Label layoutX="13.0" layoutY="78.0" text="Booking Information">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="36.0" layoutY="132.0" text="Customer Name : " />
+      <Label layoutX="13.0" layoutY="198.0" text="Vehicle Registration : " />
+      <Label layoutX="53.0" layoutY="266.0" text="Booking Date : " />
+      <Label layoutX="74.0" layoutY="337.0" text="Start Time : " />
+      <Label layoutX="79.0" layoutY="408.0" text="End Time : " />
+      <Label layoutX="79.0" layoutY="472.0" text="Mechanic : " />
+      <TextField fx:id="txtCustomerName" editable="false" layoutX="175.0" layoutY="127.0" />
+      <TextField fx:id="txtVehicleRegistration" editable="false" layoutX="175.0" layoutY="193.0" />
+      <TextField fx:id="txtStartTime" editable="false" layoutX="175.0" layoutY="332.0" />
+      <TextField fx:id="txtEndTime" editable="false" layoutX="175.0" layoutY="403.0" />
+      <TextField fx:id="txtMechanic" editable="false" layoutX="175.0" layoutY="467.0" />
+      <TextField fx:id="txtBookingDate" editable="false" layoutX="175.0" layoutY="261.0" />
+      <Label layoutX="556.0" layoutY="78.0" text="Booking">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="543.0" layoutY="295.0" text="Parts Used : " />
+      <Label layoutX="526.0" layoutY="409.0" text="New Mileage : " />
+      <Button fx:id="btnEditPartsUsed" layoutX="643.0" layoutY="127.0" mnemonicParsing="false" onAction="#editPartsUsedTable" prefHeight="31.0" prefWidth="271.0" text="Edit Parts Used For Booking" />
+      <TextField fx:id="txtMileage" layoutX="643.0" layoutY="404.0" prefHeight="31.0" prefWidth="271.0" />
+      <Label layoutX="546.0" layoutY="453.0" text="Total Cost : " />
+      <Label fx:id="lblTotalCost" layoutX="643.0" layoutY="453.0" text="£ TOTAL COST HERE" />
+      <Label layoutX="567.0" layoutY="493.0" text="Settled : " />
+      <CheckBox fx:id="settledCheckBox" layoutX="643.0" layoutY="493.0" mnemonicParsing="false" />
+      <Button fx:id="btnComplete" layoutX="813.0" layoutY="488.0" mnemonicParsing="false" onAction="#completeBooking" prefHeight="31.0" prefWidth="101.0" text="Complete" />
+      <TableView fx:id="partsTableView" layoutX="643.0" layoutY="170.0" prefHeight="226.0" prefWidth="271.0">
+        <columns>
+          <TableColumn fx:id="partNameColumn" prefWidth="133.0" text="Part Name" />
+          <TableColumn fx:id="partPriceColumn" prefWidth="137.0" text="Part Price" />
+        </columns>
+      </TableView>
+      <Label fx:id="statusAfterButtonPress" layoutX="813.0" layoutY="524.0" />
+   </children>
+</Pane>

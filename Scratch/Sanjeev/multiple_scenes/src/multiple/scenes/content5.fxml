@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.111">
+   <children>
+      <Label layoutX="36.0" layoutY="23.0" text="Please select a Specialist for more details :" />
+      <ListView layoutX="36.0" layoutY="55.0" prefHeight="220.0" prefWidth="280.0" />
+      <Button layoutX="37.0" layoutY="295.0" mnemonicParsing="false" text="Show Outstanding" />
+      <Button layoutX="165.0" layoutY="295.0" mnemonicParsing="false" text="Save Changes" />
+      <Button layoutX="265.0" layoutY="295.0" mnemonicParsing="false" text="Delete" />
+      <ChoiceBox layoutX="364.0" layoutY="32.0" prefWidth="150.0" />
+      <TextField layoutX="365.0" layoutY="67.0" promptText="Registration No" />
+      <TextField disable="true" layoutX="365.0" layoutY="142.0" promptText="Part" />
+      <CheckBox layoutX="364.0" layoutY="110.0" mnemonicParsing="false" text="Part Sent" />
+      <TextArea disable="true" layoutX="365.0" layoutY="177.0" prefHeight="72.0" prefWidth="149.0" promptText="Description" />
+      <DatePicker layoutX="365.0" layoutY="260.0" prefHeight="25.0" prefWidth="149.0" promptText="Date Sent" />
+      <DatePicker layoutX="367.0" layoutY="293.0" prefHeight="25.0" prefWidth="149.0" promptText="Date Received" />
+      <TextField layoutX="365.0" layoutY="329.0" promptText="Cost" />
+   </children>
+</AnchorPane>

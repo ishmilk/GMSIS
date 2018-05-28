@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="multiple.scenes.AddCustomerController">
+   <children>
+      <TextField layoutX="353.0" layoutY="27.0" promptText="Name" />
+      <TextField layoutX="353.0" layoutY="66.0" promptText="Address Line 1" />
+      <TextField layoutX="353.0" layoutY="108.0" promptText="Address Line 2" />
+      <TextField layoutX="353.0" layoutY="148.0" promptText="Post Code" />
+      <TextField layoutX="353.0" layoutY="192.0" promptText="Email" />
+      <TextField layoutX="353.0" layoutY="236.0" promptText="Phone Number" />
+      <RadioButton layoutX="353.0" layoutY="283.0" mnemonicParsing="false" selected="true" text="Customer">
+         <toggleGroup>
+            <ToggleGroup fx:id="CustomerType" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton layoutX="440.0" layoutY="283.0" mnemonicParsing="false" text="Business" toggleGroup="$CustomerType" />
+      <ListView layoutX="44.0" layoutY="56.0" prefHeight="246.0" prefWidth="256.0" />
+      <Label layoutX="44.0" layoutY="27.0" text="Please select a Customer for more details :" />
+      <Button layoutX="44.0" layoutY="318.0" mnemonicParsing="false" onAction="#AddCust" text="Add Customer" />
+      <Button layoutX="345.0" layoutY="323.0" mnemonicParsing="false" text="Save Changes" />
+      <Button layoutX="455.0" layoutY="323.0" mnemonicParsing="false" text="Delete" />
+   </children>
+</Pane>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="679.0" prefWidth="1006.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplication6.Screen1Controller">
+    <children>
+      <Button layoutX="15.0" layoutY="60.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="120.0" text="Customer" />
+      <Button layoutX="227.0" layoutY="60.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="120.0" text="Vehicle" />
+      <Button layoutX="440.0" layoutY="60.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="120.0" text="Bookings" />
+      <Button layoutX="652.0" layoutY="60.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="120.0" text="Specialist" />
+      <Button layoutX="865.0" layoutY="60.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="120.0" text="Parts" />
+      <Button layoutX="865.0" layoutY="17.0" mnemonicParsing="false" prefWidth="120.0" text="Log Out" />
+      <MenuButton layoutX="139.0" layoutY="112.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="151.0" text="CRITERIA">
+        <items>
+          <MenuItem mnemonicParsing="false" text="Action 1" />
+          <MenuItem mnemonicParsing="false" text="Action 2" />
+        </items>
+      </MenuButton>
+      <Label layoutX="42.0" layoutY="119.0" text="Search for" />
+      <MenuButton layoutX="371.0" layoutY="112.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="189.0" text="OPTION">
+        <items>
+          <MenuItem mnemonicParsing="false" text="Action 1" />
+          <MenuItem mnemonicParsing="false" text="Action 2" />
+        </items>
+      </MenuButton>
+      <Button layoutX="865.0" layoutY="112.0" mnemonicParsing="false" prefWidth="120.0" text="Search" />
+      <Label layoutX="311.0" layoutY="119.0" text="using" />
+      <TextArea layoutX="584.0" layoutY="112.0" prefHeight="35.0" prefWidth="251.0" />
+      <Label layoutX="41.0" layoutY="194.0" text="Please select a part for more detail:" />
+      <Label layoutX="584.0" layoutY="224.0" text="ID:" />
+      <Label layoutX="584.0" layoutY="270.0" text="Name:" />
+      <Label layoutX="584.0" layoutY="316.0" text="Description:" />
+      <Label layoutX="581.0" layoutY="437.0" text="Date In:" />
+      <Label layoutX="582.0" layoutY="486.0" text="Date Used:" />
+      <Label layoutX="583.0" layoutY="529.0" text="Reg used in:" />
+      <Label layoutX="585.0" layoutY="576.0" text="Cost:" />
+      <TextField layoutX="680.0" layoutY="220.0" prefHeight="25.0" prefWidth="200.0" />
+      <TextField layoutX="680.0" layoutY="266.0" prefHeight="25.0" prefWidth="200.0" />
+      <TextArea layoutX="680.0" layoutY="306.0" prefHeight="111.0" prefWidth="200.0" />
+      <TextField layoutX="680.0" layoutY="433.0" prefHeight="25.0" prefWidth="200.0" />
+      <TextField layoutX="680.0" layoutY="482.0" prefHeight="25.0" prefWidth="200.0" />
+      <TextField layoutX="680.0" layoutY="525.0" prefHeight="25.0" prefWidth="200.0" />
+      <TextField layoutX="680.0" layoutY="572.0" prefHeight="25.0" prefWidth="200.0" />
+      <TableView layoutX="42.0" layoutY="233.0" prefHeight="387.0" prefWidth="400.0">
+        <columns>
+          <TableColumn prefWidth="100.0" text="ID" />
+          <TableColumn prefWidth="100.0" text="Name" />
+            <TableColumn prefWidth="100.0" text="Description" />
+            <TableColumn prefWidth="100.0" text="Cost" />
+        </columns>
+      </TableView>
+      <HBox layoutX="42.0" layoutY="635.0" minWidth="-Infinity" spacing="20.0">
+         <children>
+            <Button layoutX="54.0" layoutY="635.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="120.0" text="SHOW IN STOCK" />
+            <Button layoutX="194.0" layoutY="635.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="120.0" text="SAVE CHANGES" />
+            <Button layoutX="334.0" layoutY="635.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="120.0" text="DELETE" />
+         </children>
+      </HBox>
+      <Label layoutX="15.0" layoutY="12.0" text="GM-SIS">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

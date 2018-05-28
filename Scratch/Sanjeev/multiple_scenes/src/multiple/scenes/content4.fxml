@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.111">
+   <children>
+      <Label layoutX="30.0" layoutY="25.0" text="Please select a part for more details :" />
+      <ListView layoutX="30.0" layoutY="59.0" prefHeight="226.0" prefWidth="246.0" />
+      <Button layoutX="30.0" layoutY="298.0" mnemonicParsing="false" text="Show in stock" />
+      <Button layoutX="127.0" layoutY="298.0" mnemonicParsing="false" text="Save Changes" />
+      <Button layoutX="224.0" layoutY="298.0" mnemonicParsing="false" text="Delete" />
+      <TextField layoutX="343.0" layoutY="34.0" promptText="ID No" />
+      <TextField layoutX="343.0" layoutY="71.0" promptText="Name" />
+      <TextArea layoutX="343.0" layoutY="108.0" prefHeight="94.0" prefWidth="149.0" promptText="Description" />
+      <DatePicker layoutX="343.0" layoutY="209.0" prefHeight="25.0" prefWidth="149.0" promptText="Date Shipped" />
+      <DatePicker layoutX="343.0" layoutY="248.0" prefHeight="25.0" prefWidth="149.0" promptText="Date used" />
+      <TextField layoutX="343.0" layoutY="286.0" promptText="Registered to : (Reg No)" />
+      <TextField layoutX="343.0" layoutY="319.0" promptText="Cost" />
+   </children>
+</AnchorPane>

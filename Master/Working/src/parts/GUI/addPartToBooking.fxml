@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" fx:id="addPartPane" prefHeight="555.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="parts.logic.AddPartToBookingController2">
+   <children>
+      <TableView fx:id="distinctPartsTable" layoutX="81.0" layoutY="285.0" prefHeight="178.0" prefWidth="330.0">
+         <columns>
+            <TableColumn fx:id="partNameCol" prefWidth="198.0" text="Part Name" />
+            <TableColumn fx:id="quantityCol" prefWidth="131.0" text="Stock Level" />
+         </columns>
+      </TableView>
+      <Label layoutX="50.0" layoutY="31.0" />
+      <TableView fx:id="selectedPartTable" layoutX="466.0" layoutY="285.0" prefHeight="178.0" prefWidth="449.0">
+        <columns>
+          <TableColumn fx:id="partIDCol" prefWidth="75.0" text="Part ID" />
+          <TableColumn fx:id="partNameCol2" prefWidth="112.0" text="Part Name" />
+            <TableColumn fx:id="partDescrCol" prefWidth="95.0" text="Description" />
+            <TableColumn fx:id="dateInStockCol" prefWidth="101.0" text="Date In Stock" />
+            <TableColumn fx:id="partCostCol" prefWidth="65.0" text="Cost" />
+        </columns>
+      </TableView>
+      <Label layoutX="466.0" layoutY="262.0" text="PART BY TYPE">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="83.0" layoutY="262.0" text="ALL PARTS STOCK">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="83.0" layoutY="114.0" text="Booking Date" AnchorPane.leftAnchor="83.0">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="addPartBtn" layoutX="776.0" layoutY="474.0" mnemonicParsing="false" onAction="#addSelectedPart" prefHeight="18.0" prefWidth="139.0" text="Add Selected">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="83.0" layoutY="80.0" text="Booking ID" AnchorPane.leftAnchor="83.0">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="bookingDateLbl" layoutX="212.0" layoutY="113.0" text="Booking Date">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="removePartBtn" layoutX="776.0" layoutY="191.0" mnemonicParsing="false" onAction="#removeSelectedPart" prefHeight="52.0" prefWidth="139.0" text="Remove Selected">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="466.0" layoutY="39.0" text="YOUR SELECTED PARTS">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="83.0" layoutY="147.0" text="Car Reg" AnchorPane.leftAnchor="83.0">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="bookingInfoLbl" layoutX="212.0" layoutY="79.0" prefHeight="16.0" prefWidth="75.0" text="Booking ID">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TableView fx:id="partsThisBookingTable" layoutX="466.0" layoutY="65.0" prefHeight="178.0" prefWidth="295.0">
+        <columns>
+          <TableColumn fx:id="partNameCol3" prefWidth="150.0" text="Part Name" />
+          <TableColumn fx:id="partDescrCol2" prefWidth="144.0" text="Description" />
+        </columns>
+      </TableView>
+      <Label fx:id="vehicleRegLbl" layoutX="211.0" layoutY="146.0" text="Vehicle Reg">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="savePartsToBookingBtn" layoutX="82.0" layoutY="191.0" mnemonicParsing="false" onAction="#savePartsToBooking" prefHeight="52.0" prefWidth="330.0" text="Save To Booking">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="83.0" layoutY="39.0" text="BOOKING DETAILS">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

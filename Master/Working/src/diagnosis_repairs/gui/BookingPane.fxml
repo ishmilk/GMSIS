@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="555.0" prefWidth="1000.0" style="-fx-background-color: #86C1B9;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="diagnosis_repairs.gui.BookingController">
+   <children>
+      <Button layoutX="523.0" layoutY="509.0" mnemonicParsing="false" onAction="#completeBooking" prefHeight="31.0" prefWidth="145.0" text="Complete Booking" />
+      <Button fx:id="btnDelete" layoutX="923.0" layoutY="509.0" mnemonicParsing="false" onAction="#deleteBooking" text="Delete" />
+      <Button fx:id="btnSave" layoutX="783.0" layoutY="509.0" mnemonicParsing="false" onAction="#saveBooking" text="Save Changes" />
+      <ChoiceBox fx:id="mechanicDropDown" layoutX="803.0" layoutY="355.0" prefHeight="31.0" prefWidth="186.0" />
+      <DatePicker fx:id="datePicker" editable="false" layoutX="803.0" layoutY="295.0" onAction="#checkIfSaturdaySelected" prefHeight="31.0" prefWidth="186.0" promptText="Date" />
+      <TextField fx:id="txtVehicleRegistration" editable="false" layoutX="801.0" layoutY="231.0" promptText="Registration Number" />
+      <TextField fx:id="txtCustomerName" editable="false" layoutX="801.0" layoutY="164.0" promptText="Customer" />
+      <Label layoutX="23.0" layoutY="77.0" text="Please select a booking for more details :" />
+      <Button fx:id="btnAllBookings" layoutX="547.0" layoutY="21.0" mnemonicParsing="false" onAction="#filterBookingsByNothing" prefHeight="31.0" prefWidth="121.0" text="All Bookings" />
+      <Button fx:id="btnBookingsByTheDay" layoutX="200.0" layoutY="21.0" mnemonicParsing="false" onAction="#filterBookingsByTheDay" prefHeight="31.0" prefWidth="93.0" text="Today" />
+      <Button fx:id="btnBookingsByTheHr" layoutX="23.0" layoutY="21.0" mnemonicParsing="false" onAction="#filterBookingsByTheHr" prefHeight="31.0" prefWidth="112.0" text="This Hour" />
+      <Label layoutX="697.0" layoutY="406.0" text="Start Time : " />
+      <Label layoutX="703.0" layoutY="453.0" text="End Time :" />
+      <ChoiceBox fx:id="startTimeHour" layoutX="812.0" layoutY="401.0" prefHeight="31.0" prefWidth="75.0" />
+      <ChoiceBox fx:id="endTimeMin" layoutX="914.0" layoutY="448.0" prefHeight="31.0" prefWidth="75.0" />
+      <ChoiceBox fx:id="startTimeMin" layoutX="914.0" layoutY="401.0" prefHeight="31.0" prefWidth="75.0" />
+      <Button layoutX="23.0" layoutY="509.0" mnemonicParsing="false" onAction="#spawnBooking" prefHeight="31.0" prefWidth="139.0" text="Add Booking" />
+      <TableView fx:id="bookingsTableView" layoutX="24.0" layoutY="108.0" prefHeight="393.0" prefWidth="655.0">
+        <columns>
+          <TableColumn fx:id="dateColumn" prefWidth="85.0" text="Date" />
+            <TableColumn fx:id="startTimeColumn" prefWidth="81.0" text="Start Time" />
+            <TableColumn fx:id="endTimeColumn" prefWidth="76.0" text="End Time" />
+            <TableColumn fx:id="customerColumn" prefWidth="123.0" text="Customer" />
+            <TableColumn fx:id="vehicleRegistrationColumn" prefWidth="94.0" text="Registration" />
+            <TableColumn fx:id="mechanicColumn" prefWidth="177.0" text="Mechanic" />
+        </columns>
+      </TableView>
+      <Label layoutX="703.0" layoutY="360.0" text="Mechanic : " />
+      <Label layoutX="702.0" layoutY="169.0" text="Customer : " />
+      <Label layoutX="687.0" layoutY="205.0" prefHeight="74.0" prefWidth="93.0" text="Vehicle Registration : " wrapText="true" />
+      <Label layoutX="735.0" layoutY="295.0" prefHeight="31.0" prefWidth="44.0" text="Date : " />
+      <ComboBox fx:id="endTimeHour" layoutX="812.0" layoutY="449.0" onAction="#endTimeRestrictor" prefHeight="31.0" prefWidth="75.0" />
+      <Button fx:id="btnBookingsByTheMonth" layoutX="363.0" layoutY="21.0" mnemonicParsing="false" onAction="#filterBookingsByTheMonth" prefHeight="31.0" prefWidth="112.0" text="This Month" />
+      <Button fx:id="btnClosestBookings" layoutX="719.0" layoutY="21.0" mnemonicParsing="false" onAction="#filterBookingsByTimeProximity" prefHeight="31.0" prefWidth="270.0" text="Show Next Booings Per Vehicle" wrapText="true" />
+   </children>
+</Pane>

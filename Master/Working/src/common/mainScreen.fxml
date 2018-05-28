@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="common.FXMLDocumentController">
+    <top>
+        <Pane id="taskBar" prefHeight="145.0" prefWidth="1000.0" style="-fx-background-color: #86C1B9;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Button id="Cust" fx:id="btnCustomer" layoutX="150.0" layoutY="14.0" onAction="#showCust" prefHeight="25.0" prefWidth="120.0" text="Customer" />
+      <Button id="Vehicle" fx:id="btnVehicle" layoutX="290.0" layoutY="14.0" onAction="#showVehic" prefHeight="25.0" prefWidth="120.0" text="Vehicle" />
+      <Button id="Book" fx:id="btnBooking" layoutX="430.0" layoutY="14.0" onAction="#showBooking" prefHeight="25.0" prefWidth="120.0" text="Bookings" />
+      <Button id="Part" fx:id="btnParts" layoutX="570.0" layoutY="14.0" onAction="#showPart" prefHeight="0.0" prefWidth="120.0" text="Parts" />
+      <Button id="LogOut" fx:id="btnLogout" layoutX="864.0" layoutY="14.0" onAction="#logOut" prefHeight="25.0" prefWidth="120.0" text="Log Out" />
+      <Label layoutX="28.0" layoutY="12.0" prefHeight="27.0" prefWidth="81.0" text="GM SIS">
+         <font>
+            <Font name="Century Gothic Bold" size="22.0" />
+         </font>
+               <effect>
+                  <Blend />
+               </effect>
+      </Label>
+      <Button id="SearchButt" fx:id="btnSearch" layoutX="710.0" layoutY="99.0" mnemonicParsing="false" onAction="#showSearch" prefHeight="25.0" prefWidth="120.0" text="SEARCH" textAlignment="CENTER" />
+            <ComboBox fx:id="Criti1" layoutX="28.0" layoutY="96.0" onAction="#selectCriti1" prefHeight="30.0" prefWidth="150.0" promptText="Option" />
+            <ComboBox fx:id="Criti2" layoutX="208.0" layoutY="98.0" onAction="#alterSearch" prefHeight="30.0" prefWidth="150.0" promptText="Criteria" />
+            <TextField fx:id="SearchBox" layoutX="389.0" layoutY="98.0" prefHeight="31.0" prefWidth="300.0" promptText="Search Value" />
+            <Button fx:id="btnUsers" layoutX="719.0" layoutY="14.0" mnemonicParsing="false" onAction="#showEmp" prefHeight="25.0" prefWidth="120.0" text="Users" />
+            <ComboBox fx:id="cbTemplate" layoutX="389.0" layoutY="98.0" prefHeight="30.0" prefWidth="300.0" promptText="Vehicle Template" visible="false" />
+            <Label layoutX="28.0" layoutY="70.0" text="To Search, select an Option, a Criteria and enter a Search Value" />
+            <ComboBox fx:id="cbType" layoutX="389.0" layoutY="98.0" prefHeight="30.0" prefWidth="300.0" promptText="Type" visible="false" />
+    </children>
+</Pane>
+    </top>
+   <left>
+    <Pane fx:id="Content" prefHeight="555.0" prefWidth="1000.0" style="-fx-background-color: #86C1B9;" BorderPane.alignment="CENTER">
+            
+        </Pane>
+   </left>  
+</BorderPane>
